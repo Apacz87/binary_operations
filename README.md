@@ -1,4 +1,5 @@
 # Binary Operations
+[![Build Status](https://travis-ci.org/Apacz87/binary_operations.svg?branch=master)](https://travis-ci.org/Apacz87/binary_operations)  
 **Author:** *Tomasz Leman*  
 **Date:** *11/12/2017*
 ## Binary Operations library.
@@ -10,5 +11,5 @@ Simple library of binary operations. Serves as an example of using google unit t
 - [x] Add GoogleTest library,
 - [x] Write unit tests,
 - [x] Write CMake script,
-- [ ] Integrate Travis CI,
+- [x] Integrate Travis CI,
 - [ ] Add new functions to the library with test coverage.
