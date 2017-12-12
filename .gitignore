@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# Temporary vim files 
+*.swp
+
 # Compiled Object files
 *.slo
 *.lo
