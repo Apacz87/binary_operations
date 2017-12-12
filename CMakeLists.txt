@@ -42,6 +42,7 @@ add_library(googletest ${GOOGLETEST_SOURCES})
 add_executable(
    unit_tests
    unit_tests/main.cpp
+   unit_tests/bit_state.cpp
    unit_tests/setting_bits.cpp
    )
 
