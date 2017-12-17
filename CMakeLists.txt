@@ -44,6 +44,7 @@ add_executable(
    unit_tests/main.cpp
    unit_tests/bit_state.cpp
    unit_tests/setting_bits.cpp
+   unit_tests/invert_bits.cpp
    )
 
 add_dependencies(unit_tests googletest)
