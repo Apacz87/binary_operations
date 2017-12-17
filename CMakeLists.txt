@@ -5,6 +5,13 @@ project(binary-operations)
 enable_language(C)
 enable_language(CXX)
 
+if(CMAKE_COMPILER_IS_GNUCC)
+   option(ENABLE_COVERAGE "Enable coverage reporting for gcc/clang" FALSE)
+   if (ENABLE_COVERAGE)
+      add_compile_options(--coverage -O0)
+   endif()
+endif()
+
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
    set(CMAKE_CXX_FLAGS         "-std=c++0x -Wall -Wextra -Wno-unknown-pragmas -Wwrite-strings -Wno-unused -pedantic")
    set(CMAKE_CXX_FLAGS_DEBUG   "-O0 -g3")
@@ -46,6 +53,7 @@ add_executable(
    unit_tests/setting_bits.cpp
    unit_tests/invert_bits.cpp
    )
+target_link_libraries(unit_tests --coverage)
 
 add_dependencies(unit_tests googletest)
 
@@ -58,6 +66,5 @@ target_link_libraries(
 
 include(CTest)
 enable_testing()
-
 add_test(unit ${PROJECT_BINARY_DIR}/unit_tests)
 
