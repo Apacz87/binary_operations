@@ -1,8 +1,9 @@
 # Prerequisites
 *.d
 
-# Temporary vim files 
+# Vim editor files 
 *.swp
+.vimrc
 
 # Compiled Object files
 *.slo
