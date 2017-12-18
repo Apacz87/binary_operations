@@ -1,13 +1,15 @@
 #ifndef BINARY_OPERATIONS_H_INCLUDED
 #define BINARY_OPERATIONS_H_INCLUDED
 
+#include <cstdint>
+
 namespace bopr
 {
-   unsigned setbiton(const unsigned& t_value, const int& t_bit);
-   unsigned setbitoff(const unsigned& t_value, const int& t_bit);
-   unsigned invertbit(const unsigned& t_value, const int& t_bit);
-   unsigned invertbits(const unsigned& t_value, const int& t_last, const int& t_count);
-   bool bitstate(const unsigned& t_value, const int& t_bit);
+   uint32_t setbiton(const uint32_t& t_value, const uint8_t& t_bit);
+   uint32_t setbitoff(const uint32_t& t_value, const uint8_t& t_bit);
+   uint32_t invertbit(const uint32_t& t_value, const uint8_t& t_bit);
+   uint32_t invertbits(const uint32_t& t_value, const uint8_t& t_last, const uint8_t& t_count);
+   bool bitstate(const uint32_t& t_value, const uint8_t& t_bit);
 }
 
 #endif
