@@ -21,15 +21,15 @@ namespace bopr
       return t_value ^ mask;
    }
 
-   unsigned invertbits(const unsigned& t_value, const int& t_last, const int& t_first)
+   unsigned invertbits(const unsigned& t_value, const int& t_last, const int& t_count)
    {
       unsigned bitsState, opposedBitState, mask;
-      bitsState = t_value >> t_last + 1 - t_first;
+      bitsState = t_value >> t_last + 1 - t_count;
       bitsState = ~bitsState;
-      bitsState &= ~(~0 << t_first);
-      bitsState <<= t_last + 1 - t_first;
-      opposedBitState = ~(~0 << t_first);
-      opposedBitState <<= t_last + 1 - t_first;
+      bitsState &= ~(~0 << t_count);
+      bitsState <<= t_last + 1 - t_count;
+      opposedBitState = ~(~0 << t_count);
+      opposedBitState <<= t_last + 1 - t_count;
       opposedBitState = ~opposedBitState;
       mask = t_value & opposedBitState;
       return bitsState | mask;
